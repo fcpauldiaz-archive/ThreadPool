@@ -1,0 +1,62 @@
+.squares{
+  position: relative;
+}
+
+.square{
+  border: 2px solid black;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  height: 100px;
+  line-height: 100px;
+  position: absolute;
+  text-align: center;
+  transition: 1s;
+  width: 100px;
+}
+
+.square.s1{
+  background: red;
+  left: 0;
+  top: 525px;
+}
+
+.square.s2{
+  background: orange;
+  left: 75px;
+  top: 450px;
+  z-index: 3;
+}
+
+.square.s3{
+  background: yellow;
+  left: 150px;
+  top: 375px;
+  z-index: 2;
+}
+
+.square.s4{
+  background: black;
+  left: 225px;
+  top: 300px;
+  z-index: 0;
+}
+
+.square.s5{
+  background: green;
+  left: 300px;
+  top: 225px;
+}
+
+.square.s6{
+  background: blue;
+  left: 375px;
+  top: 150px;
+  z-index: 2;
+}
+
+.square.s7{
+  background: purple;
+  left: 450px;
+  top: 75px;
+}

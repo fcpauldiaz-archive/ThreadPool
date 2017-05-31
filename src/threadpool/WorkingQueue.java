@@ -6,7 +6,6 @@
 
 package threadpool;
 
-import java.net.Socket;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -26,6 +25,8 @@ public class WorkingQueue {
     
     public synchronized HttpRequest get() throws InterruptedException {
         while(this.cola.size() == 0) {
+            //creo que aqui iria el modo pánico
+            //pero no puedo instanciar threads aqui ¿?
             wait();
         }
         if(this.cola.size() == maxSize) {

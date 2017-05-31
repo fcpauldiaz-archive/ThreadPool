@@ -7,19 +7,20 @@
 package threadpool;
 
 /**
- *
+ * clase que crea la cantidad de threads
  * @author SDX
  */
 public class Pool {
 
     WorkingQueue queue;
     
-    public Pool(int nThread) {
-        this.queue = new WorkingQueue(nThread);
-        
-        for (int count = 0; count < nThread; count++) {
-            String threadName = "Thread - " + count;
-            RequestExecutor request = new RequestExecutor(queue);
+    public Pool(int maxThread) {
+        //la cantidad maxima de threads que pueden haber
+        this.queue = new WorkingQueue(maxThread);
+        //crear la cantidad de threads definidos en el pool
+        for (int i = 0; i < maxThread; i++) {
+            String threadName = "Thread - " + i;
+            Request request = new Request(queue);
             Thread thread = new Thread(request, threadName);
             thread.start();
         }

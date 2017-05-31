@@ -7,13 +7,13 @@
 package threadpool;
 
 /**
- *
+ * Esta clase solo sirve para llamar al metodo run de los runnable y prints
  * @author SDX
  */
-public class RequestExecutor implements Runnable {
+public class Request implements Runnable {
     
     private WorkingQueue cola;
-    public RequestExecutor(WorkingQueue queue) {
+    public Request(WorkingQueue queue) {
         this.cola = queue;
     }
 

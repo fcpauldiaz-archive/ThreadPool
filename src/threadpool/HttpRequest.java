@@ -133,6 +133,7 @@ public class HttpRequest implements Runnable {
             output.close();
             try {
                 // in.close();
+                // Sleep a proposito para evaluar el pool
                 Thread.sleep(5 * 1000);
             } catch (InterruptedException ex) {
                 Logger.getLogger(HttpRequest.class.getName()).log(Level.SEVERE, null, ex);

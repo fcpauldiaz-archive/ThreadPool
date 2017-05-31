@@ -48,6 +48,7 @@ public class MultiThreadedServer implements Runnable{
                 new HttpRequest(
                 clientSocket, "localhost")
                 );*/
+                //solo agregue esta linea
                 cola.addRequest(new HttpRequest(clientSocket));
             } catch (InterruptedException ex) {
                 Logger.getLogger(MultiThreadedServer.class.getName()).log(Level.SEVERE, null, ex);
